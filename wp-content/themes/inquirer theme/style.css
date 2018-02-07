@@ -3,5 +3,40 @@ Theme Name: Inquirer
 Author: Ryan Everett
 Description: Theme created for The Black-Briar Inquirer
 Version: 0.0.1
-Tags: 
+Tags:
 */
+
+
+.header{
+  font-family: 'UnifrakturCook', cursive;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.logo{
+  font-size: 275%
+}
+.sub_logo{
+  font-family: 'Overpass Mono', monospace;
+  font-size: 125%;
+
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+.left{
+  float: left;
+  font-size: 75%;
+}
+.right{
+  float: right;
+  font-size: 75%;
+}
+.right a{
+  color: black;
+
+}
