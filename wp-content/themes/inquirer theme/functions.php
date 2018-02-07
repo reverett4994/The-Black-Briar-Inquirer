@@ -12,9 +12,8 @@ function learning_wp_setup(){
   //Feature Image Support
   add_theme_support('post-thumbnails');
   // width,height,cropping
-  add_image_size('small-thumbnail', 180, 120, true);
-  add_image_size('banner-image', 920, 210, array( 'left', 'top' ));
-  add_image_size('menu', 300, 250);
+  add_image_size('large', 500, 350, true);
+  add_image_size('small-thumbnail', 300, 250);
   //nav menus
   register_nav_menus(array(
     'header' => __('Header Menu'),
@@ -29,4 +28,38 @@ function learning_wp_setup(){
 }
 
 add_action('after_setup_theme','learning_wp_setup');
+
+function new_excerpt_more( $more ) {
+	return ' ...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+function article_cats($article){
+  $post = $article;
+  $taxonomy = 'category';
+
+  // Get the term IDs assigned to post.
+  $post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
+
+  // Separator between links.
+  $separator = ', ';
+
+  if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ) {
+
+      $term_ids = implode( ',' , $post_terms );
+
+      $terms = wp_list_categories( array(
+          'title_li' => '',
+          'style'    => 'none',
+          'echo'     => false,
+          'taxonomy' => $taxonomy,
+          'include'  => $term_ids
+      ) );
+
+      $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+
+      // Display post categories.
+      echo  $terms;
+  }
+}
  ?>

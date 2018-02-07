@@ -6,6 +6,7 @@ Version: 0.0.1
 Tags:
 */
 
+/*********************************************************                  HEADER                  **********************************************************************/
 
 .header{
   font-family: 'UnifrakturCook', cursive;
@@ -40,3 +41,41 @@ Tags:
   color: black;
 
 }
+/*********************************************************                  HEADER                  **********************************************************************/
+
+.site-content{
+  margin-top: 1em;
+}
+
+/*********************************************************                  INDEX                  **********************************************************************/
+
+.index_article{
+  width: 50em;
+  padding: 1em 2em;
+  border: .5px solid #ccc;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5em;
+}
+.index_article h3{
+  text-align: center;
+}
+.index_article a{
+  color: black;
+  text-decoration: none;
+}
+.index_article a:hover{
+  color: blue;
+}
+.index_article .index_author{
+  margin-top: -.5em;
+  font-size: .9em;
+}
+.index_thumbnail{
+  max-width: 100%;
+  height: 20em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*********************************************************                  INDEX                  **********************************************************************/
