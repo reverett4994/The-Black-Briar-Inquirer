@@ -45,14 +45,42 @@ Tags:
 
 .site-content{
   margin-top: 1em;
+  min-height: 100vh;
 }
 
 /*********************************************************                  INDEX                  **********************************************************************/
 
+.index_wrapper{
+  text-align: center;
+  min-height: 100vh;
+}
+.left_column{
+  display: inline-block;
+  width: 26%;
+  float: left;
+  clear: left;
+  vertical-align: top;
+  height: 100vh;
+  border-right: .5px solid #ccc;
+}
+.center_column{
+  display: inline-block;
+  width: 45%;
+  height: 100vh;
+}
+.right_column{
+  display: inline-block;
+  width: 26%;
+  float: right;
+  vertical-align: top;
+  clear: right;
+  height: 100vh;
+  border-left: .5px solid #ccc;
+}
 .index_article{
-  width: 50em;
+  text-align: left;
   padding: 1em 2em;
-  border: .5px solid #ccc;
+  border-bottom: .5px solid #ccc;
   font-family: 'Lato', sans-serif;
   line-height: 1.5em;
 }
