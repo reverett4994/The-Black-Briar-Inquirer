@@ -5,7 +5,20 @@ function addCSS(){
 }
 add_action('wp_enqueue_scripts','addCSS');
 
+function addCSSOWL(){
+  wp_enqueue_style('OWL 1',get_stylesheet_directory_uri() . '/owl.carousel.min.css');
+}
+add_action('wp_enqueue_scripts','addCSSOWL');
 
+function addCSSOWL2(){
+  wp_enqueue_style('OWL 2',get_stylesheet_directory_uri() . '/owl.theme.default.css');
+}
+add_action('wp_enqueue_scripts','addCSSOWL2');
+
+function addJS(){
+  wp_enqueue_script('OWL',get_stylesheet_directory_uri() . '/owlcarousel/owl.carousel.min.js' );
+}
+add_action('wp_enqueue_scripts','addJS');
 
 //Theme Setup
 function learning_wp_setup(){
