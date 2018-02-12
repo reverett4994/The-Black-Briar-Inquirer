@@ -18,6 +18,10 @@ Tags:
 .logo{
   font-size: 275%
 }
+.logo a{
+  text-decoration: none;
+  color: black;
+}
 .sub_logo{
   font-family: 'Overpass Mono', monospace;
   font-size: 125%;
@@ -111,8 +115,57 @@ Tags:
 
 /*********************************************************                  SINGLE                  **********************************************************************/
 
-.single_wrapper h1 {
+.single_article {
+  padding: 2em 5em;
   font-family: 'Lato', sans-serif;
 }
 
+.single_article h1{
+  font-family: 'Garamond', sans-serif;
+  font-size: 3.5em;
+  border-bottom: 1px solid #999;
+}
+
+.single_article .featured_image{
+  width: 75%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single_article .meta_info{
+  color: #666;
+}
+.meta_info a{
+  color: #666;
+}
+
+.content_div{
+  font-size: 1.4em;
+  line-height: 1.7em;
+  margin-top: 3em;
+}
+
+.owl-carousel{
+  margin: 8em 0;
+  height: 500px ;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.owl-item img{
+  height: 500px;
+}
+
+.comment-form-comment label{
+  font-size: 1.5em;
+  vertical-align: top;
+  display: block;
+}
+.submit{
+  padding: 13px 13px;
+  font-size: 1.2em;
+}
 /*********************************************************                  SINGLE                  **********************************************************************/

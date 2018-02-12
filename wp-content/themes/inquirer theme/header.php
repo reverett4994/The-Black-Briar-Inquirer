@@ -16,7 +16,7 @@
 
       <div class="header">
         <div class="logo">
-          The Black-Briar Inquirer
+          <a href="/newspaper">The Black-Briar Inquirer</a>
         </div>
       <div class="sub_logo">
           <div class="left">

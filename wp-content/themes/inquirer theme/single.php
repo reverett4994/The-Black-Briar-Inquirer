@@ -7,48 +7,52 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     <?php
       $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
      ?>
-    <div class="">
+    <div class="single_article">
       <h1><?php the_title() ?></h1>
-      <p class='index_author'>by: <?php the_author() ?></p>
-      <?php article_cats($post) ?>
       <?php if (strlen($featured_img_url)>0) {
-        ?><img src=<?php echo $featured_img_url ?> alt="" class='index_thumbnail'><?php
+        ?><img src=<?php echo $featured_img_url ?> alt="" class='featured_image'><?php
       } ?>
-      <p><?php the_content() ?></p>
+      <p class='meta_info'>
+        by: <?php the_author() ?> | &nbsp
+        <?php article_cats($post) ?>&nbsp
+        <?php echo get_the_date( 'F j Y' ); ?> at <?php the_time( 'h:i A' ); ?>
+      </p>
+      <div class='content_div'><?php the_content() ?></div>
 
-      <div class="owl-carousel owl-theme">
+
         <?php $attachments = new Attachments( 'attachments' ); ?>
         <?php if( $attachments->exist() ) : ?>
+          <div class="owl-carousel owl-theme">
             <?php while( $attachments->get() ) : ?>
-                 <?php echo $attachments->image( 'thumbnail' ); ?>
+                 <?php echo $attachments->image( 'large' ); ?>
             <?php endwhile; ?>
+          </div>
         <?php endif; ?>
+
+
+    <?php comment_form(); ?>
+
+    <ol class="commentlist">
+      <?php
+        //Gather comments for a specific page/post
+        $comments = get_comments(array(
+          'post_id' => $post->ID,
+          'status' => 'approve' //Change this to the type of comments to be displayed
+        ));
+
+        //Display the list of comments
+        wp_list_comments(array(
+          'per_page' => 10, //Allow comment pagination
+          'reverse_top_level' => false //Show the oldest comments at the top of the list
+        ), $comments);
+      ?>
+    </ol>
     </div>
 
-    </div>
   </div>
   <hr>
 
-  <?php $attachments = new Attachments( 'attachments' ); ?>
-  <?php if( $attachments->exist() ) : ?>
-    <h3>Attachments</h3>
-    <p>Total Attachments: <?php echo $attachments->total(); ?></p>
-    <ul>
-      <?php while( $attachments->get() ) : ?>
-        <li>
-          ID: <?php echo $attachments->id(); ?><br />
-          Type: <?php echo $attachments->type(); ?><br />
-          Subtype: <?php echo $attachments->subtype(); ?><br />
-          URL: <?php echo $attachments->url(); ?><br />
-          Image: <?php echo $attachments->image( 'thumbnail' ); ?><br />
-          Source: <?php echo $attachments->src( 'full' ); ?><br />
-          Size: <?php echo $attachments->filesize(); ?><br />
-          Title Field: <?php echo $attachments->field( 'title' ); ?><br />
-          Caption Field: <?php echo $attachments->field( 'caption' ); ?>
-        </li>
-      <?php endwhile; ?>
-    </ul>
-  <?php endif; ?>
+
   <?php
 endwhile;
 
@@ -61,6 +65,7 @@ else:
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
+    autoWidth:true,
     nav:true,
     responsive:{
         0:{
