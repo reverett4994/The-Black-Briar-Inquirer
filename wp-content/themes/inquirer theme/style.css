@@ -64,13 +64,11 @@ Tags:
   float: left;
   clear: left;
   vertical-align: top;
-  height: 100vh;
   border-right: .5px solid #ccc;
 }
 .center_column{
   display: inline-block;
   width: 45%;
-  height: 100vh;
 }
 .right_column{
   display: inline-block;
@@ -78,7 +76,6 @@ Tags:
   float: right;
   vertical-align: top;
   clear: right;
-  height: 100vh;
   border-left: .5px solid #ccc;
 }
 .index_article{
@@ -110,6 +107,28 @@ Tags:
   margin-right: auto;
 }
 
+.center_column img{
+  height: 30.5em;
+}
+
+li.categories{
+  margin-top: 1em;
+  text-align: center;
+  font-size: 2.5em;
+  list-style-type: none;
+  font-family: 'Lato', sans-serif;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.categories ul{
+  list-style-type: none;
+  text-align: left;
+}
+.categories li{
+  width: 45%;
+  display: inline-block;
+}
 /*********************************************************                  INDEX                  **********************************************************************/
 
 
@@ -169,3 +188,59 @@ Tags:
   font-size: 1.2em;
 }
 /*********************************************************                  SINGLE                  **********************************************************************/
+
+
+/*********************************************************                  CAT PAGE                  **********************************************************************/
+
+.cat_header{
+  text-align: center;
+  font-family: 'Garamond', sans-serif;
+}
+.cat_article{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 2em;
+  border-bottom: .5px solid #ccc;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5em;
+}
+.cat_article img{
+  width: 25%;
+  height: auto;
+  display: inline-block;
+}
+ .h3_with_img{
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  width: 65%;
+  font-size: 1.7em;
+  line-height: 1.5em;
+}
+.h3_without_img{
+ text-align: center;
+ display: block;
+ width: 100%;
+ font-size: 1.7em;
+ line-height: 1.5em;
+}
+.cat_article a{
+  color: black;
+  text-decoration: none;
+}
+.cat_article a:hover{
+  color: blue;
+}
+.cat_author{
+  font-size: 90%;
+  color: #666;
+}
+.cat_author a{
+  font-size: 90%;
+  color: #666;
+}
+
+
+/*********************************************************                  CAT PAGE                  **********************************************************************/

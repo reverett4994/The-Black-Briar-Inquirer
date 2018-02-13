@@ -1,20 +1,23 @@
 <?php get_header();?>
 
 <div class="site-content clearfix">
+  <h1 class='cat_header'>Most Recent <?php echo single_cat_title();?> Articles</h1>
     <?php if(have_posts()) :
       while (have_posts()) : the_post(); ?>
         <?php
         $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
        ?>
-      <div class="politics_div index_article">
-        <?php article_cats($post) ?>
-        <?php if (strlen($featured_img_url)>0) {
-          ?><img src=<?php echo $featured_img_url ?> alt="" class='index_thumbnail'><?php
-        } ?>
+      <div class="cat_article">
+        <?php $title=get_the_title() ?>
+        <?php if (strlen($featured_img_url)>0):  ?>
+          <img src=<?php echo $featured_img_url ?> alt="" class='index_thumbnail'>
+          <h3 class='h3_with_img'><a href=<?php echo the_permalink() ?>><?php echo mb_strimwidth($title, 0, 70, '...');?></a></h3>
+        <?php  else: ?>
+        <h3 class='h3_without_img'><a href=<?php echo the_permalink() ?>><?php echo mb_strimwidth($title, 0, 70, '...');?></a></h3>
+      <?php  endif; ?>
 
-        <h3><a href=<?php echo the_permalink() ?>><?php the_title() ?></a></h3>
         <p><?php the_excerpt() ?></p>
-        <p class='index_author'>by: <?php the_author() ?></p>
+        <p class='cat_author'>by: <?php the_author() ?> | <?php article_cats($post) ?></p>
       </div>
       <?php endwhile;
 
