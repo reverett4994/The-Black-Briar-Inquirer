@@ -6,6 +6,7 @@
       while (have_posts()) : the_post(); ?>
         <?php
         $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+        $author_string=str_replace(" ","_",get_the_author() );
        ?>
       <div class="cat_article">
         <?php $title=get_the_title() ?>
@@ -17,7 +18,7 @@
       <?php  endif; ?>
 
         <p><?php the_excerpt() ?></p>
-        <p class='cat_author'>by: <?php the_author() ?> | <?php article_cats($post) ?></p>
+        <p class='cat_author'>by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a> | <?php article_cats($post) ?></p>
       </div>
       <?php endwhile;
 

@@ -37,7 +37,8 @@
       <?php
       foreach ($left as $key=>&$post) {
           if ($key==0) {
-             $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+             $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ;
+             $author_string=str_replace(" ","_",get_the_author() );?>
             <div class="politics_div index_article">
               <?php article_cats($post) ?>
               <?php if (strlen($featured_img_url)>0) {
@@ -46,10 +47,11 @@
 
               <h3><a href=<?php echo the_permalink() ?>><?php the_title() ?></a></h3>
               <p><?php the_excerpt() ?></p>
-              <p class='index_author'>by: <?php the_author() ?></p>
+              <p class='index_author'>by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a></p>
             </div><?php
           } else {
-            $featured_img_url =''; ?>
+            $featured_img_url =''; ;
+            $author_string=str_replace(" ","_",get_the_author() );?>
            <div class="politics_div index_article">
              <?php article_cats($post) ?>
              <?php if (strlen($featured_img_url)>0) {
@@ -58,7 +60,7 @@
 
              <h3><a href=<?php echo the_permalink() ?>><?php the_title() ?></a></h3>
              <p><?php the_excerpt() ?></p>
-             <p class='index_author'>by: <?php the_author() ?></p>
+             <p class='index_author'>by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a></p>
              </div><?php
           }
       }
@@ -68,7 +70,8 @@
       <?php
       foreach ($center as $key=>&$post) {
           if ($key==0) {
-             $featured_img_url = '' ?>
+             $featured_img_url = '' ;
+             $author_string=str_replace(" ","_",get_the_author() );?>
             <div class="politics_div index_article">
               <?php article_cats($post) ?>
               <?php if (strlen($featured_img_url)>0) {
@@ -77,10 +80,11 @@
 
               <h3><a href=<?php echo the_permalink() ?>><?php the_title() ?></a></h3>
               <p><?php the_excerpt() ?></p>
-              <p class='index_author'>by: <?php the_author() ?></p>
+              <p class='index_author'>by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a></p>
             </div><?php
           } else {
-            $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+            $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ;
+            $author_string=str_replace(" ","_",get_the_author() );?>
            <div class="politics_div index_article">
              <?php article_cats($post) ?>
              <?php if (strlen($featured_img_url)>0) {
@@ -89,7 +93,7 @@
 
              <h3><a href=<?php echo the_permalink() ?>><?php the_title() ?></a></h3>
              <p><?php the_excerpt() ?></p>
-             <p class='index_author'>by: <?php the_author() ?></p>
+             <p class='index_author'>by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a></p>
              </div><?php
           }
       }
@@ -100,7 +104,8 @@
       <?php
       foreach ($right as $key=>&$post) {
           if ($key==0) {
-            $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+            $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ;
+            $author_string=str_replace(" ","_",get_the_author() );?>
             <div class="politics_div index_article">
               <?php article_cats($post) ?>
               <?php if (strlen($featured_img_url)>0) {
@@ -109,10 +114,11 @@
 
               <h3><a href=<?php echo the_permalink() ?>><?php the_title() ?></a></h3>
               <p><?php the_excerpt() ?></p>
-              <p class='index_author'>by: <?php the_author() ?></p>
+              <p class='index_author'>by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a></p>
             </div><?php
           } else {
-            $featured_img_url = ''; ?>
+            $featured_img_url = ''; ;
+            $author_string=str_replace(" ","_",get_the_author() );?>
            <div class="politics_div index_article">
              <?php article_cats($post) ?>
              <?php if (strlen($featured_img_url)>0) {
@@ -121,7 +127,7 @@
 
              <h3><a href=<?php echo the_permalink() ?>><?php the_title() ?></a></h3>
              <p><?php the_excerpt() ?></p>
-             <p class='index_author'>by: <?php the_author() ?></p>
+             <p class='index_author'>by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a></p>
              </div><?php
           }
       }
@@ -130,6 +136,7 @@
     <?php echo wp_list_categories() ?>
   </div>
 </div>
+<a href=<?php echo add_query_arg( 'author', 'Ryan_Everett', '/newspaper/author-search' ); ?>>sewarch</a>
 
 <?php get_footer();?>
 

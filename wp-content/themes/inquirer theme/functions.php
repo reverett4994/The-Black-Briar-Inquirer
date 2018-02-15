@@ -75,4 +75,8 @@ function article_cats($article){
       echo  $terms;
   }
 }
+
+function add_spaces($str) {
+    return ucwords(str_replace("_", " ", $str));
+}
  ?>

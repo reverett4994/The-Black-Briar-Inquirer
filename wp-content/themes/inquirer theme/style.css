@@ -6,11 +6,19 @@ Version: 0.0.1
 Tags:
 */
 
+
+html body{
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  max-width: 100%;
+}
 /*********************************************************                  HEADER                  **********************************************************************/
 
 .header{
   font-family: 'UnifrakturCook', cursive;
-  width: 100%;
+  max-width: 100%;
+  margin: 0 10px;
   padding: 15px 0;
   text-align: center;
   border-bottom: 1px solid black;
@@ -126,8 +134,24 @@ li.categories{
   text-align: left;
 }
 .categories li{
-  width: 45%;
+  width: 40%;
   display: inline-block;
+  text-align: center;
+  margin-bottom: .5em;
+}
+.categories li:nth-child(odd) {
+  text-align: right;
+  margin-right: 1em;
+}
+.categories li:nth-child(even) {
+  text-align: left;
+  margin-left: 1em;
+}
+.categories a{
+  color: black;
+}
+.categories a:hover{
+  color: blue;
 }
 /*********************************************************                  INDEX                  **********************************************************************/
 
@@ -244,3 +268,15 @@ li.categories{
 
 
 /*********************************************************                  CAT PAGE                  **********************************************************************/
+
+
+
+/*********************************************************                  Footer                  **********************************************************************/
+
+.footer{
+  height: 200px;
+  width: 100%;
+  background-color: #23282d;
+}
+
+/*********************************************************                  Footer                  **********************************************************************/

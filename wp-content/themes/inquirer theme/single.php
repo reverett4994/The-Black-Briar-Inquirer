@@ -6,6 +6,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
   <div class="single_wrapper">
     <?php
       $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+      $author_string=str_replace(" ","_",get_the_author() );
      ?>
     <div class="single_article">
       <h1><?php the_title() ?></h1>
@@ -13,7 +14,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
         ?><img src=<?php echo $featured_img_url ?> alt="" class='featured_image'><?php
       } ?>
       <p class='meta_info'>
-        by: <?php the_author() ?> | &nbsp
+        by: <a href=<?php echo add_query_arg( 'author', $author_string, '/newspaper/author-search' ); ?>><?php the_author() ?></a> | &nbsp
         <?php article_cats($post) ?>&nbsp
         <?php echo get_the_date( 'F j Y' ); ?> at <?php the_time( 'h:i A' ); ?>
       </p>
