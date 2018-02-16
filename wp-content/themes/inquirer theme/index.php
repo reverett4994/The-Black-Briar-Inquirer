@@ -136,7 +136,6 @@
     <?php echo wp_list_categories() ?>
   </div>
 </div>
-<a href=<?php echo add_query_arg( 'author', 'Ryan_Everett', '/newspaper/author-search' ); ?>>sewarch</a>
 
 <?php get_footer();?>
 

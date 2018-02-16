@@ -101,11 +101,14 @@ html body{
   text-decoration: none;
 }
 .index_article a:hover{
-  color: blue;
+  text-decoration: underline;
 }
 .index_article .index_author{
   margin-top: -.5em;
   font-size: .9em;
+}
+.index_author a{
+  text-decoration: underline;
 }
 .index_thumbnail{
   max-width: 100%;
@@ -149,10 +152,12 @@ li.categories{
 }
 .categories a{
   color: black;
+  text-decoration: underline;
 }
 .categories a:hover{
-  color: blue;
+
 }
+
 /*********************************************************                  INDEX                  **********************************************************************/
 
 
@@ -255,7 +260,7 @@ li.categories{
   text-decoration: none;
 }
 .cat_article a:hover{
-  color: blue;
+  text-decoration: underline;
 }
 .cat_author{
   font-size: 90%;
@@ -264,6 +269,7 @@ li.categories{
 .cat_author a{
   font-size: 90%;
   color: #666;
+  text-decoration: underline;
 }
 
 
@@ -275,8 +281,34 @@ li.categories{
 
 .footer{
   height: 200px;
-  width: 100%;
+  min-width: 100vw;
+  max-width: 100vw;
   background-color: #23282d;
+  padding: 6em 0;
 }
 
+.footer_text{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.footer_third{
+  display: inline-block;
+  width: 30%;
+}
+.footer_third a{
+  font-family: 'Lato', sans-serif;
+  display: block;
+  color: white;
+  margin-bottom: 1.5em;
+  text-decoration: none;
+}
+.footer_third a:hover{
+  text-decoration: underline;
+}
+.footer h2{
+  font-family: 'Garamond', sans-serif;
+  color: white;
+}
 /*********************************************************                  Footer                  **********************************************************************/
