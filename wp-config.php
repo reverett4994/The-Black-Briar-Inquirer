@@ -79,6 +79,12 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
+ini_set('display_errors','Off');
+ini_set('error_reporting', E_ALL );
+define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
+
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

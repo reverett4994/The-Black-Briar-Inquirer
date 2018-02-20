@@ -1,0 +1,79 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: February 20, 2018 8:31 am
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.32
+WORDPRESS:	4.9.2
+PHP INFO:	7.1.11 | SAPI: apache2handler
+SERVER:		Apache/2.4.29 (Win32) OpenSSL/1.0.2l PHP/7.1.11 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (128M default) 
+MEMORY STACK: 14MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Not Supported 
+TABLES: total:13 | filtered:0 | create:13 
+FILTERED: [] 
+SQL CREATED: 20180220_theblackbriarinquirer_a5203ed12c3ff02e5358180220083133_database.sql 
+SQL FILE SIZE: 677.96KB (694229) 
+SQL FILE TIME: 2018-02-20 08:31:44 
+SQL RUNTIME: 0.27 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  D:/XAMPP/htdocs/newspaper 
+ARCHIVE FILE: 20180220_theblackbriarinquirer_a5203ed12c3ff02e5358180220083133_archive.zip 
+FILTERS: *OFF* 
+DIRS:
+	not set 
+FILES:
+	not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	57.61MB 
+STATS:	Dirs 495 | Files 4,281 
+SQL ADDED: 20180220_theblackbriarinquirer_a5203ed12c3ff02e5358180220083133_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 4776
+    [filename] => D:\XAMPP\htdocs\newspaper\wp-snapshots\tmp\20180220_theblackbriarinquirer_a5203ed12c3ff02e5358180220083133_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 36.97MB 
+ARCHIVE RUNTIME: 5.32 sec. 
+MEMORY STACK: 14MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+PACK SIZE:  
+Template parsed with new data 
+Complete [D:/XAMPP/htdocs/newspaper/wp-snapshots/tmp/20180220_theblackbriarinquirer_a5203ed12c3ff02e5358180220083133_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 677.96KB 
+Installer File: 444KB 
+Archive File: 36.97MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 11.85 sec.
+PEAK PHP MEMORY USED: 16MB
+DONE PROCESSING => 20180220_theblackbriarinquirer February 20, 2018 8:31 am
+ 
